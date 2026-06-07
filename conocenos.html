@@ -46,11 +46,30 @@
 
 
     <main class="max-w-4xl mx-auto">
-        <!-- Encabezado -->
-        <header class="mb-16">
-            <h1 class="text-5xl font-black tracking-tight text-slate-900 mb-6">Sobre Scriptiva Lab</h1>
-            <p class="text-xl text-slate-600 font-light max-w-2xl">Ingeniería de software de clase mundial, diseñada para resolver los retos tecnológicos más complejos del mercado actual.</p>
-        </header>
+       <!-- Sección Sobre Scriptiva Lab con foto -->
+        <section class="flex flex-col md:flex-row items-center gap-8 py-10">
+            
+            <!-- Bloque de Texto -->
+            <div class="flex-1">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Sobre Scriptiva Lab</h2>
+                <p class="text-lg text-slate-600">
+                    Ingeniería de software de clase mundial, diseñada para resolver los retos tecnológicos más complejos del mercado actual.
+                </p>
+            </div>
+
+           
+            <!-- Bloque de la Foto (Círculo con resplandor) -->
+            <div class="relative flex-shrink-0">
+                <!-- El efecto de resplandor azul detrás -->
+                <div class="absolute inset-0 bg-blue-400 rounded-full blur-2xl opacity-30"></div>
+                
+                <!-- La imagen -->
+                <!-- object-position: 50% 20% significa centrado horizontal, y 20% de arriba hacia abajo -->
+                <!-- Cambia el 20% a 10% o 30% para subir o bajar la imagen dentro del círculo -->
+                <img src="assets/perfil.png" alt="Carlos Garcia" 
+                    class="relative w-40 h-40 object-cover object-[50%_20%] rounded-full border-4 border-white shadow-xl">
+            </div>
+        </section>
 
         <!-- Misión, Visión y Valores -->
         <section class="grid md:grid-cols-3 gap-8 mb-20">
