@@ -26,6 +26,7 @@
 </head>
 <body class="bg-[#fcfcfc] text-gray-900 antialiased relative overflow-x-hidden select-none">
 
+    <!-- Elementos Decorativos de Fondo -->
     <div class="absolute top-32 left-0 opacity-40 hidden lg:block z-0">
         <div class="grid grid-cols-3 gap-2 w-32">
             <div class="w-8 h-8 bg-gray-200 rounded-md"></div><div class="w-8 h-8 bg-gray-300 rounded-md"></div><div class="w-8 h-8 bg-transparent"></div>
@@ -56,6 +57,7 @@
     <div class="absolute top-[450px] left-[20%] opacity-20 hidden md:block text-6xl font-bold text-gray-500 z-0">;</div>
     <div class="absolute top-[400px] right-[20%] opacity-20 hidden md:block text-5xl font-bold text-gray-500 z-0">;</div>
 
+    <!-- Header -->
     <header class="w-full bg-white/60 backdrop-blur-xl fixed top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -85,6 +87,7 @@
         </div>
     </header>
 
+    <!-- Inicio -->
     <section id="inicio" class="relative pt-48 pb-32 px-6">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight text-[#0a0f18] leading-[1.05] mb-8">
@@ -95,6 +98,7 @@
             </p>
 
             <div class="relative inline-flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+                <!-- Figuras geométricas con animación flotante -->
                 <div class="absolute -top-10 -left-6 w-6 h-6 bg-black rounded-md -rotate-12 hidden sm:block animate-float"></div>
                 <div class="absolute top-2 -left-12 w-5 h-5 bg-black rounded-md rotate-45 hidden sm:block animate-float-delayed"></div>
                 <div class="absolute -bottom-8 left-0 w-7 h-7 bg-black rounded-md -rotate-12 hidden sm:block animate-float-alt"></div>
@@ -113,6 +117,7 @@
         </div>
     </section>
 
+    <!-- Servicios -->
     <section id="servicios" class="py-12 relative px-6 z-10">
         <div class="max-w-7xl mx-auto">
             
@@ -123,18 +128,100 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden min-h-[300px] flex flex-col justify-end">
+                <!-- Tarjeta 1 con Efecto Hover y Diseño Completo -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden min-h-[300px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-gray-200 cursor-pointer">
+                    <div class="absolute top-6 right-6 opacity-30">
+                        <div class="grid grid-cols-3 gap-1.5 w-24">
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-transparent"></div>
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                            <div class="w-6 h-6 bg-transparent"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 text-gray-800 relative z-10 mt-12">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 relative z-10 mb-2">Desarrollo Web</h3>
                     <p class="text-gray-500 text-sm leading-relaxed relative z-10">
                         Creación de aplicaciones web robustas y modernas utilizando tecnologías comprobadas (Python, Flask, bases de datos relacionales).
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden min-h-[300px] flex flex-col justify-end">
+                <!-- Tarjeta 2 con Efecto Hover y Diseño Completo -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden min-h-[300px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-gray-200 cursor-pointer">
+                    <div class="absolute top-6 right-6 opacity-30">
+                        <div class="grid grid-cols-3 gap-1.5 w-24">
+                            <div class="w-6 h-6 bg-transparent"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 text-gray-800 relative z-10 mt-12">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 relative z-10 mb-2">Seguridad & Arquitectura</h3>
                     <p class="text-gray-500 text-sm leading-relaxed relative z-10">
                         Implementación de entornos de producción seguros, protección de datos sensibles y flujos de trabajo eficientes.
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+                <!-- Tarjeta 3 con Efecto Hover y Diseño Completo -->
+                <div class="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 relative overflow-hidden min-h-[300px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-gray-200 cursor-pointer">
+                    <div class="absolute top-6 right-6 opacity-30">
+                        <div class="grid grid-cols-3 gap-1.5 w-24">
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-transparent"></div>
+                            <div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                            <div class="w-6 h-6 bg-transparent"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div><div class="w-6 h-6 bg-gray-200 rounded-md"></div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 text-gray-800 relative z-10 mt-12">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s-8-1.79-8-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 relative z-10 mb-2">Gestión de Datos</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed relative z-10">
+                        Diseño y administración de bases de datos altamente optimizadas para asegurar la integridad y rápida disponibilidad de la información.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-[#12161f] text-white pt-16 pb-8 px-6 mt-12 relative overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+                
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                    <div class="grid grid-cols-7 gap-[1px] shrink-0">
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#9F9F9F] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#9F9F9F] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#9F9F9F] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#9F9F9F] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                        <div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#FFFFFF] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#9F9F9F] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div><div class="w-1.5 h-1.5 bg-[#D1D5DB] rounded-[1px] transition-all duration-300 hover:scale-[2]"></div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold tracking-widest uppercase mb-0.5">SCRIPTIVA; <span class="text-gray-400 text-sm font-semibold">LAB</span></h2>
+                        <p class="text-gray-400 text-sm font-light">Desarrollo de software de vanguardia, moderno y seguro.</p>
+                    </div>
+                </div>
+
+                <div class="md:text-right space-y-1">
+                    <p class="text-gray-400 text-sm">San Carlos, Costa Rica</p>
+                    <p><a href="mailto:hola@scriptivalab.com" class="text-white hover:text-gray-300 transition-colors text-sm font-medium">hola@scriptivalab.com</a></p>
+                </div>
+            </div>
+
+            <div class="w-full border-t border-gray-800/80 pt-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 tracking-wide font-light">
+                <p>&copy; 2026 Scriptiva; Lab. Todos los derechos reservados.</p>
+                <div class="space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition-colors">Términos</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
