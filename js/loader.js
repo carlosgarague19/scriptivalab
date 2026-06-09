@@ -24,9 +24,19 @@
     /** Tiempo mínimo visible del loader en milisegundos */
     var MIN_DISPLAY_MS = 5000;
 
+    /** Tiempo máximo de espera antes de ocultar (evita quedar bloqueado) */
+    var MAX_WAIT_MS = 12000;
+
     var grid = document.getElementById('loader-grid');
     var loader = document.getElementById('page-loader');
+
+    if (!grid || !loader) {
+        return;
+    }
+
     var index = 0;
+    var hidden = false;
+    var startTime = Date.now();
 
     /* Genera cada píxel con su color y retardo de animación (--i) */
     PIXELS.forEach(function (row) {
@@ -39,22 +49,37 @@
         });
     });
 
-    var startTime = Date.now();
-
     /** Aplica fade out, restaura el scroll y elimina el overlay */
     function hideLoader() {
+        if (hidden) {
+            return;
+        }
+        hidden = true;
         loader.classList.add('fade-out');
         document.body.classList.remove('loading');
         setTimeout(function () { loader.remove(); }, 550);
     }
 
-    /**
-     * Espera el evento 'load' (recursos listos) y respeta el tiempo mínimo
-     * para que el loader no desaparezca demasiado rápido en conexiones rápidas.
-     */
-    window.addEventListener('load', function () {
+    /** Respeta el tiempo mínimo de visualización antes de ocultar */
+    function scheduleHide() {
         var elapsed = Date.now() - startTime;
         var remaining = MIN_DISPLAY_MS - elapsed;
         setTimeout(hideLoader, Math.max(0, remaining));
-    });
+    }
+
+    /**
+     * Espera el evento 'load' (recursos listos). Si la página ya cargó
+     * (caché del navegador), oculta de inmediato respetando el mínimo.
+     */
+    if (document.readyState === 'complete') {
+        scheduleHide();
+    } else {
+        window.addEventListener('load', scheduleHide);
+    }
+
+    /**
+     * Fallback: si algún recurso externo bloquea el evento 'load',
+     * el loader no debe quedarse visible indefinidamente.
+     */
+    setTimeout(scheduleHide, MAX_WAIT_MS);
 })();
