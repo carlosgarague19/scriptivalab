@@ -7,14 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/favicon.png">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-    </style>
+    <link rel="stylesheet" href="css/base.css">
 </head>
-<body class="bg-[#fcfcfc] text-slate-800 antialiased py-20 px-6">
-     <!-- Elementos Decorativos -->
+<body class="bg-[#fcfcfc] text-slate-800 antialiased py-20 px-6 relative overflow-x-hidden">
+
+    <!-- Decoración de fondo: mosaicos pixelados (solo desktop) -->
      <div class="absolute top-32 left-0 opacity-40 hidden lg:block z-0">
         <div class="grid grid-cols-3 gap-2 w-32">
             <div class="w-8 h-8 bg-gray-200 rounded-md"></div><div class="w-8 h-8 bg-gray-300 rounded-md"></div><div class="w-8 h-8 bg-transparent"></div>
@@ -46,11 +43,12 @@
     <div class="absolute top-[400px] right-[20%] opacity-20 hidden md:block text-5xl font-bold text-gray-500 z-0">;</div>
 
 
-    <main class="max-w-4xl mx-auto">
-       <!-- Sección Sobre Scriptiva Lab con foto -->
+    <main class="max-w-4xl mx-auto relative z-10">
+
+        <!-- Presentación: descripción de la empresa y foto del fundador -->
         <section class="flex flex-col md:flex-row items-center gap-8 py-10">
-            
-            <!-- Bloque de Texto -->
+
+            <!-- Texto introductorio -->
             <div class="flex-1">
                 <h2 class="text-4xl font-bold text-slate-900 mb-4">Sobre Scriptiva Lab</h2>
                 <p class="text-lg text-slate-600">
@@ -58,21 +56,15 @@
                 </p>
             </div>
 
-           
-            <!-- Bloque de la Foto (Círculo con resplandor) -->
+            <!-- Foto de perfil con resplandor azul (object-[50%_20%] ajusta el encuadre vertical) -->
             <div class="relative flex-shrink-0">
-                <!-- El efecto de resplandor azul detrás -->
                 <div class="absolute inset-0 bg-blue-400 rounded-full blur-2xl opacity-30"></div>
-                
-                <!-- La imagen -->
-                <!-- object-position: 50% 20% significa centrado horizontal, y 20% de arriba hacia abajo -->
-                <!-- Cambia el 20% a 10% o 30% para subir o bajar la imagen dentro del círculo -->
-                <img src="assets/perfil.png" alt="Carlos Garcia" 
+                <img src="assets/perfil.png" alt="Carlos Garcia"
                     class="relative w-40 h-40 object-cover object-[50%_20%] rounded-full border-4 border-white shadow-xl">
             </div>
         </section>
 
-        <!-- Misión, Visión y Valores -->
+        <!-- Pilares corporativos: misión, visión y valores -->
         <section class="grid md:grid-cols-3 gap-8 mb-20">
             <div class="bg-white p-8 border border-slate-200 rounded-lg shadow-sm">
                 <h2 class="text-xl font-bold mb-4 text-slate-900">Misión</h2>
@@ -93,13 +85,13 @@
             </div>
         </section>
 
-        <!-- Perfil Técnico -->
+        <!-- Enfoque técnico y metodología de trabajo -->
         <section class="space-y-6">
             <h2 class="text-3xl font-bold text-slate-900">Nuestro Enfoque</h2>
             <p class="text-lg text-slate-600">En Scriptiva Lab, cada proyecto es una oportunidad para aplicar el conocimiento derivado de nuestro diplomado en Ingeniería de Software (ISW) y una incesante pasión autodidacta por las tecnologías emergentes. No nos limitamos a escribir código; creamos arquitecturas robustas que minimizan riesgos y maximizan la eficiencia operativa de su empresa.</p>
         </section>
 
-        <!-- Tecnologías -->
+        <!-- Stack y áreas de especialización -->
         <section class="mt-16">
             <h2 class="text-2xl font-bold text-slate-900 mb-6">Tecnologías de Vanguardia</h2>
             <div class="flex flex-wrap gap-4">
@@ -112,15 +104,16 @@
         </section>
         
       
+        <!-- Navegación de retorno al inicio -->
         <footer class="mt-20 border-t pt-8 flex justify-between items-center">
             <a href="index.html" class="text-sm font-semibold uppercase tracking-widest hover:underline">← Volver al inicio</a>
             <div class="text-xs text-slate-400">© 2026 Scriptiva Lab. Calidad de Software, nuestro compromiso.</div>
         </footer>
     </main>
-     <!-- Contenedor que abarca todo el ancho de la pantalla -->
-     <div class="absolute w-screen left-0 mt-10 pointer-events-none">
-            
-        <!-- Bloque Izquierdo: Pegado a la orilla izquierda -->
+    <!-- Decoración inferior: mosaicos en los bordes (no interactivos) -->
+    <div class="absolute w-screen left-0 mt-10 pointer-events-none">
+
+        <!-- Bloque izquierdo -->
         <div class="absolute left-0 flex flex-col gap-2 opacity-20 px-4">
             <div class="w-10 h-10 bg-slate-300 rounded-md"></div>
             <div class="flex gap-2">
@@ -134,7 +127,7 @@
             </div>
         </div>
 
-        <!-- Bloque Derecho: Pegado a la orilla derecha -->
+        <!-- Bloque derecho -->
         <div class="absolute right-0 flex gap-2 opacity-20 px-4">
             <div class="w-10 h-10 bg-slate-300 rounded-md mt-6"></div>
             <div class="w-10 h-10 bg-slate-300 rounded-md"></div>

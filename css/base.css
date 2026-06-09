@@ -1,0 +1,29 @@
+/**
+ * base.css — Estilos compartidos en todo el sitio Scriptiva Lab
+ *
+ * Incluye tipografía base y animaciones reutilizables.
+ * Cargado en todas las páginas HTML (excepto inicio.html de pruebas).
+ */
+
+/* Tipografía: aplica Inter (Google Fonts) como fuente principal */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ------------------------------------------------------------------
+   Animaciones flotantes (index.html — botones del hero)
+   Cada clase aplica un movimiento vertical distinto para dar profundidad.
+   ------------------------------------------------------------------ */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
+    50%       { transform: translateY(-12px) rotate(var(--tw-rotate)); }
+}
+
+@keyframes float-alt {
+    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
+    50%       { transform: translateY(10px) rotate(var(--tw-rotate)); }
+}
+
+.animate-float          { animation: float 4s ease-in-out infinite; }
+.animate-float-delayed  { animation: float 5s ease-in-out 2s infinite; }
+.animate-float-alt      { animation: float-alt 4.5s ease-in-out infinite; }

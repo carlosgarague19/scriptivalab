@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scriptiva Lab | Ingeniería de Software</title>
+    <!-- Tailwind CSS vía CDN: utilidades de diseño responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/favicon.png">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        
-        /* Animaciones personalizadas para las figuras flotantes */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
-            50% { transform: translateY(-12px) rotate(var(--tw-rotate)); }
-        }
-        @keyframes float-alt {
-            0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
-            50% { transform: translateY(10px) rotate(var(--tw-rotate)); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-        .animate-float-delayed { animation: float 5s ease-in-out 2s infinite; }
-        .animate-float-alt { animation: float-alt 4.5s ease-in-out infinite; }
-    
-    </style>
+    <!-- Estilos propios: base.css (global) + loader.css (pantalla de carga) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
-<body class="bg-[#fcfcfc] text-gray-900 antialiased relative overflow-x-hidden select-none">
+<body class="loading bg-[#fcfcfc] text-gray-900 antialiased relative overflow-x-hidden select-none">
 
+    <!-- Pantalla de carga: logo animado mientras cargan recursos (ver js/loader.js) -->
+    <div id="page-loader" aria-hidden="true">
+        <div class="loader-brand">
+            <div id="loader-grid" class="loader-grid"></div>
+            <div class="loader-text">
+                <div class="loader-name">SCRIPTIVA;</div>
+                <div class="loader-lab">LAB</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <!-- Decoración de fondo: mosaicos pixelados y punto y coma (solo desktop) -->
     <div class="absolute top-32 left-0 opacity-40 hidden lg:block z-0">
         <div class="grid grid-cols-3 gap-2 w-32">
             <div class="w-8 h-8 bg-gray-200 rounded-md"></div><div class="w-8 h-8 bg-gray-300 rounded-md"></div><div class="w-8 h-8 bg-transparent"></div>
@@ -57,6 +57,7 @@
     <div class="absolute top-[450px] left-[20%] opacity-20 hidden md:block text-6xl font-bold text-gray-500 z-0">;</div>
     <div class="absolute top-[400px] right-[20%] opacity-20 hidden md:block text-5xl font-bold text-gray-500 z-0">;</div>
 
+    <!-- Navegación fija con logo pixelado y enlaces de ancla -->
     <header class="w-full bg-white/60 backdrop-blur-xl fixed top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -85,6 +86,7 @@
         </div>
     </header>
 
+    <!-- Hero: titular principal y llamadas a la acción -->
     <section id="inicio" class="relative pt-48 pb-32 px-6">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight text-[#0a0f18] leading-[1.05] mb-8">
@@ -113,6 +115,7 @@
         </div>
     </section>
 
+    <!-- Tarjetas de servicios ofrecidos -->
     <section id="servicios" class="py-24 px-6 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 md:text-center relative z-10">
@@ -166,6 +169,7 @@
         </div>
     </section>
 
+    <!-- Caso de estudio destacado: NotiaEduc -->
     <section class="py-24 px-6 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-slate-900 mb-16 text-center">Nuestro Trabajo en Acción</h2>
@@ -185,6 +189,7 @@
         </div>
     </section>
 
+    <!-- Proyectos en producción y desarrollo -->
     <section class="py-24 px-6 bg-[#fcfcfc]">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-slate-900 mb-16 text-center">Soluciones de Ingeniería</h2>
@@ -219,6 +224,7 @@
         </div>
     </section>
 
+    <!-- Pie de página: contacto, enlaces legales y marca -->
     <footer id="contacto" class="bg-[#12161f] text-white pt-16 pb-8 px-6 mt-12 relative overflow-hidden">
         <div class="absolute left-0 bottom-0 opacity-10">
             <div class="grid grid-cols-4 gap-2 w-48">

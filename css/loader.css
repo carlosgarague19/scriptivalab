@@ -1,0 +1,87 @@
+/**
+ * loader.css — Pantalla de carga inicial (solo index.html)
+ *
+ * Muestra el logo pixelado animado mientras la página termina de cargar.
+ * El JS asociado (js/loader.js) controla cuándo desaparece el overlay.
+ */
+
+/* Overlay a pantalla completa que cubre el contenido */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcfcfc;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Estado de salida: fade out antes de eliminar el elemento del DOM */
+#page-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Bloquea el scroll mientras el loader está activo */
+body.loading {
+    overflow: hidden;
+}
+
+/* Contenedor vertical: cuadrícula + texto de marca */
+.loader-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Cuadrícula 7×5 del logo pixelado */
+.loader-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 22px);
+    gap: 6px;
+}
+
+/* Cada píxel pulsa en secuencia; --i define el retardo de la animación */
+.loader-pixel {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    animation: loader-pixel 1.4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.07s);
+}
+
+@keyframes loader-pixel {
+    0%, 100% { transform: scale(1);   opacity: 1; }
+    50%       { transform: scale(1.6); opacity: 0.45; }
+}
+
+/* Texto SCRIPTIVA; / LAB debajo del logo */
+.loader-text {
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    animation: loader-text-in 0.6s ease 0.3s both;
+}
+
+.loader-name {
+    color: #000;
+    font-size: 22px;
+}
+
+.loader-lab {
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: left;
+    margin-top: 3px;
+}
+
+@keyframes loader-text-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

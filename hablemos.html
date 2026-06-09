@@ -7,14 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/favicon.png">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <link rel="stylesheet" href="css/base.css">
 </head>
-<body class="bg-[#fcfcfc] text-slate-800 antialiased py-20 px-6">
+<body class="bg-[#fcfcfc] text-slate-800 antialiased py-20 px-6 relative overflow-x-hidden">
 
-    <!-- Elementos Decorativos (Iguales a tus otras páginas) -->
-    <!-- Elementos Decorativos -->
+    <!-- Decoración de fondo: mosaicos pixelados (solo desktop) -->
     <div class="absolute top-32 left-0 opacity-40 hidden lg:block z-0">
         <div class="grid grid-cols-3 gap-2 w-32">
             <div class="w-8 h-8 bg-gray-200 rounded-md"></div><div class="w-8 h-8 bg-gray-300 rounded-md"></div><div class="w-8 h-8 bg-transparent"></div>
@@ -39,17 +36,18 @@
 
     <main class="max-w-3xl mx-auto relative z-10">
         <h1 class="text-4xl font-bold text-slate-900 mb-10">Hablemos</h1>
-        
-        <!-- Tarjeta de contacto con mismo estilo -->
+
+        <!-- Tarjeta de contacto: foto, nombre y datos de comunicación -->
         <div class="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex flex-col md:flex-row gap-8 items-center">
-            <!-- Foto -->
+
+            <!-- Foto de perfil con resplandor -->
             <div class="relative flex-shrink-0">
                 <div class="absolute inset-0 bg-blue-400 rounded-full blur-2xl opacity-30"></div>
                 <img src="assets/perfil.png" alt="Carlos Garcia" 
                      class="relative w-40 h-40 object-cover object-[50%_20%] rounded-full border-4 border-white shadow-xl">
             </div>
             
-            <!-- Datos -->
+            <!-- Información de contacto -->
             <div class="space-y-4">
                 <h2 class="text-2xl font-bold text-slate-900">Carlos Andres Garcia Aguero</h2>
                 <p class="text-blue-600 font-medium">Ingeniero de Software.</p>
@@ -61,15 +59,16 @@
             </div>
         </div>
         
+        <!-- Navegación de retorno al inicio -->
         <footer class="mt-20 border-t pt-8 flex justify-between items-center">
             <a href="index.html" class="text-sm font-semibold uppercase tracking-widest hover:underline">← Volver al inicio</a>
             <div class="text-xs text-slate-400">© 2026 Scriptiva Lab.</div>
         </footer>
     </main>
-    <!-- Contenedor que abarca todo el ancho de la pantalla -->
+    <!-- Decoración inferior: mosaicos en los bordes (no interactivos) -->
     <div class="absolute w-screen left-0 mt-10 pointer-events-none">
-            
-        <!-- Bloque Izquierdo: Pegado a la orilla izquierda -->
+
+        <!-- Bloque izquierdo -->
         <div class="absolute left-0 flex flex-col gap-2 opacity-20 px-4">
             <div class="w-10 h-10 bg-slate-300 rounded-md"></div>
             <div class="flex gap-2">
@@ -83,7 +82,7 @@
             </div>
         </div>
 
-        <!-- Bloque Derecho: Pegado a la orilla derecha -->
+        <!-- Bloque derecho -->
         <div class="absolute right-0 flex gap-2 opacity-20 px-4">
             <div class="w-10 h-10 bg-slate-300 rounded-md mt-6"></div>
             <div class="w-10 h-10 bg-slate-300 rounded-md"></div>
